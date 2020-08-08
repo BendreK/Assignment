@@ -1,0 +1,26 @@
+<!--  -->
+<div class="div">
+    <label>Select Genres From DropDown : </label>
+    <select [(ngModel)]="selectedGenres" (change)="onSelect(selectedGenres)">
+        <option></option>
+        <option *ngFor="let g of genresList">
+            {{g.name}}
+        </option>
+    </select>
+</div>
+<!-- <ul>
+    <li *ngFor="let m of movieNameList">{{m}}</li>
+    <li *ngFor="let p of posterList">{{p}}</li>
+</ul> -->
+<table id="customers">
+    <thead>
+        <th>Movie Name</th>
+        <th>Poster Image</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of movieDataList;index as i" (click)="onRowClick(r)">
+            <td>{{r.original_title}}</td>
+            <td>{{r.poster_path}}</td>
+        </tr>
+    </tbody>
+</table>

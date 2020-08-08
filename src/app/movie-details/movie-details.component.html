@@ -1,0 +1,38 @@
+<div *ngIf="tableshow">
+    <h3>Movie Name : {{movieDetailsList.original_title}}</h3>
+
+    <table id="customers">
+        <thead>
+            <th>Cover image</th>
+            <th>Poster image</th>
+            <th>Description</th>
+            <th>Language</th>
+            <th>Popularity</th>
+            <th>Release date</th>
+            <th>Revenue</th>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let mv of movieDetailsList"> -->
+            <td>{{movieDetailsList.backdrop_path}}</td>
+            <td>{{movieDetailsList.poster_path}}</td>
+            <td>{{movieDetailsList.overview}}</td>
+            <td>{{movieDetailsList.original_language}}</td>
+            <td>{{movieDetailsList.popularity}}</td>
+            <td>{{movieDetailsList.release_date}}</td>
+            <td>{{movieDetailsList.revenue}}</td>
+            <!-- </tr> -->
+        </tbody>
+    </table>
+</div>
+
+
+<!-- 
+<ul>
+    <li>Cover Image => {{movieDetailsList.backdrop_path}}</li>
+    <li>Poster image=> {{movieDetailsList.poster_path}}</li>
+    <li>Description=> {{movieDetailsList.overview}}</li>
+    <li>Language=> {{movieDetailsList.original_language}}</li>
+    <li>Popularity=> {{movieDetailsList.popularity}}</li>
+    <li>Release date=> {{movieDetailsList.release_date}}</li>
+    <li>Revenue=> {{movieDetailsList.revenue}}</li>
+</ul> -->
